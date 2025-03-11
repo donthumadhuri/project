@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+#navbarNav {
+    background-color: rgba(183, 247, 226, 0.584);
+}
+
+.navbar-nav .nav-item {
+    margin-right: 40px;
+}
+
+body {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: hsl(137, 46%, 24%);
+    font-family: "Poppins", sans-serif;
+}
+
+#final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.card {
+    max-width: 33rem;
+    background: #ffffff;
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* Fixed the typo here from "colum" to "column" */
+    align-items: center;
+}
+
+.star {
+    font-size: 10vh;
+    cursor: pointer;
+}
+
+.one {
+    color: rgb(255, 0, 0);
+}
+
+.two {
+    color: rgb(255, 106, 0);
+}
+
+.three {
+    color: rgb(251, 255, 120);
+}
+
+.four {
+    color: rgb(255, 255, 0);
+}
+
+.five {
+    color: rgb(24, 159, 14);
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 768px) {
+    .star {
+        font-size: 7vh;
+        /* Reduce star size on smaller screens */
+    }
+
+    #final {
+        gap: 50px;
+        /* Reduce gap between elements for small screens */
+    }
+
+    .card {
+        max-width: 100%;
+        /* Make card take full width on smaller screens */
+        margin: 0.5rem;
+        /* Add some margin on the sides */
+    }
+}
+
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
